@@ -84,33 +84,7 @@ public class Ship
         strokeWeight(6);
         line(pos.x-5*cos(theta), pos.y-5*sin(theta), pos.x+15*cos(theta-PI/2), pos.y+15*sin(theta-PI/2));
       }
-      //if (space)
-      //{
-      //  int intersect = -1;
-      //  PVector cross = new PVector(pos.x-5000*cos(theta), pos.y-5000*sin(theta));
-      //  float dist = 100000;
-      //  for (int i = 0; i < AsteroidField.getField().size(); i++)
-      //  {
-      //    Asteroid a = AsteroidField.getField().get(i);
-      //    fill(255, 0, 0);
-      //    PVector inter = a.intersects(pos.x, pos.y, pos.x-cos(theta), pos.y-sin(theta));
-      //    if (dist(a.pos.x, a.pos.y, inter.x, inter.y) < a.getRadius() && dist(pos.x-5000*cos(theta), pos.y-5000*sin(theta), inter.x, inter.y) <
-      //      dist(pos.x, pos.y, pos.x-5000*cos(theta), pos.y-5000*sin(theta)))
-      //    {
-      //      if (dist(inter.x + a.getRadius()/2*cos(theta), inter.y + a.getRadius()/2*sin(theta), pos.x, pos.y) < dist)
-      //      {
-      //        dist = dist(inter.x + a.getRadius()/2*cos(theta), inter.y + a.getRadius()/2*sin(theta), pos.x, pos.y);
-      //        intersect = i;
-      //        cross = new PVector(inter.x + a.getRadius()/2*cos(theta), inter.y + a.getRadius()/2*sin(theta));
-      //      }
-      //    }
-      //  }
-      //  if (intersect >= 0)
-      //    AsteroidField.getField().get(intersect).hit();
-      //  stroke(0, 255, 0);
-      //  strokeWeight(6);
-      //  line(pos.x, pos.y, cross.x, cross.y);
-      //}
+      
       for (int i = fired.size() - 1; i >= 0; i--)
       {
         Bullet b = fired.get(i);
